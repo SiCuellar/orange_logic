@@ -27,17 +27,24 @@ class Org
 
 
 
-    def kDifference(nums, k)
+    def kDifference(a, k)
         count = 0
         
-        sorted_nums = nums.sort.uniq
+        sorted_nums = a.sort.uniq
         sorted_nums.map do |num|
             # binding.pry
-            if nums.include?(num + k)
+            if a.include?(num + k)
                 count +=1
             end 
         end 
         count
+    end
+
+    def countPairs(numbers, k)
+    # (a,b) pair ---- target = a+k = b
+    sorted_nums = numbers.sort.uniq
+    
+
     end
 end 
 

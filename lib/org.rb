@@ -24,9 +24,6 @@ class Org
         longest_word 
     end
 
-
-
-
     def kDifference(a, k)
         count = 0
         
@@ -40,11 +37,20 @@ class Org
         count
     end
 
+    
     def countPairs(numbers, k)
     # (a,b) pair ---- target = a+k = b
-    sorted_nums = numbers.sort.uniq
-    
+    # use k = b-a 
 
+    count = 0
+    sorted_nums = numbers.sort
+    sorted_nums.map do |num|
+        if numbers.include?(num+k)
+            count +=1
+        end
     end
+    count
+    # binding.pry
+    end 
 end 
 

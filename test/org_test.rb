@@ -8,10 +8,18 @@ class OrgTest < Minitest::Test
         assert_instance_of Org, org
     end 
 
-    def test_it_can_check_for_first_even_word
+    def test_it_can_check_for_longest_even_word
         org = Org.new
         expected = 
         sentence = ("It is a pleasant day today")
         assert_equal "pleasant", org.longestEvenWord(sentence)
     end 
+
+    def test_it_can_return_pairs_with_difference
+        org = Org.new
+        a = [5,1,5,3,4,2,2]
+        assert_equal 3, org.kDifference(a, 2)
+    end 
+    
+   
 end 

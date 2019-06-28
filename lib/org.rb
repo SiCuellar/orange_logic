@@ -27,9 +27,17 @@ class Org
 
 
 
-    def kDifference(a, k)
-        sorted_integers = a.sort.uniq
-        binding.pry
+    def kDifference(nums, k)
+        count = 0
+        
+        sorted_nums = nums.sort.uniq
+        sorted_nums.map do |num|
+            # binding.pry
+            if nums.include?(num + k)
+                count +=1
+            end 
+        end 
+        count
     end
 end 
 

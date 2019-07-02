@@ -8,7 +8,7 @@ class Org
         
         words.each do |word|
             if word.length % 2 == 0 
-                longest_word = word if word.length 
+                longest_word = word if word.length > longest_word.length
             end 
         end 
         longest_word
@@ -20,25 +20,37 @@ class Org
             a.include?(num + k)
         end 
     end
+
     
-    
-    
-    # def countPairs(numbers, k)
-    # # (a,b) pair ---- target = a+k = b
-    # # use k = b-a 
-    #     count = 0
-    #     sorted_nums = numbers.sort
-    #     sorted_nums.map do |num|
-    #         if numbers.include?(num+k)
-    #             count +=1
+    # (a,b) pair ---- target = a+k = b
+    # use k = b-a 
+    # def make_pairs(numbers, k)
+    #     counter = 0
+    #     sorted_nums = (numbers.uniq).sort
+    #     sorted_nums.each_with_index do |num, i|
+    #         if sorted_nums[i + 1]
+    #             # binding.pry
+    #             if (num - sorted_nums[i + 1]).abs == k
+    #                 counter +=1;
+    #             end
     #         end
     #     end
-    #     count
+    #     puts counter
     # end 
     
-    # def makepairs(numbers)
-    #     hash_table = {}
-    # end 
+    def countPairs(arr, k)
+        counter = 0
+        new_arr = (arr.uniq).sort
+        new_arr.each_with_index do |num, i|
+            if new_arr[i + 1]
+                if (num - new_arr[i + 1]).abs == k
+                    counter += 1
+                end
+            end
+        end
+        counter
+    end
+
 end 
 
 # def kDifference(a, k)

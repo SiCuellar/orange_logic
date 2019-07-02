@@ -15,23 +15,30 @@ class OrgTest < Minitest::Test
         assert_equal "pleasant", org.longestEvenWord(sentence)
     end 
 
+    def test_it_can_return_first_even_longest_word
+        org = Org.new
+        expected = 
+        sentence = ("It is a four cars stars day today")
+        assert_equal "four", org.longestEvenWord(sentence)
+    end 
+
     def test_it_can_return_pairs_with_difference
         org = Org.new
         a = [5,1,5,3,4,2,2]
         assert_equal 3, org.kDifference(a, 2)
     end 
 
-    # def test_it_can_make_pairs
-    #     org = Org.new
-    #     numbers = [1,1,1,2]
-    #     assert_equal [(1,1),(1,2)], org.makepairs(numbers)
-    # end 
-
-    # def test_it_can_count_pairs
-    #     org = Org.new
-    #     numbers = [1,1,1,2]
-    #     assert_equal 1, org.countPairs(numbers,1)
-    # end 
+    def test_it_can_return_number_of_valid_pairs
+        org = Org.new
+        numbers = [6,1,1,2,2,3,3,1]
+        assert_equal 2, org.countPairs(numbers, 1)
+    end 
     
+    def test_it_can_return_number_of_valid_pairs_alternate
+        org = Org.new
+        numbers = [1,1,1,2]
+        assert_equal 1, org.countPairs(numbers, 1)
+    end 
+
    
 end 

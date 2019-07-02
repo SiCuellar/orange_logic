@@ -25,32 +25,39 @@ class Org
     end
 
     def kDifference(a, k)
-        count = 0
-        
         sorted_nums = a.sort.uniq
-        sorted_nums.map do |num|
-            # binding.pry
-            if a.include?(num + k)
-                count +=1
-            end 
+        sorted_nums.count do |num|
+            a.include?(num + k)
         end 
-        count
     end
 
+    # def kDifference(a, k)
+    #     count = 0
+    #     sorted_nums = a.sort.uniq
+    #     sorted_nums.map do |num|
+    #         if a.include?(num + k)
+    #             count +=1
+    #         end 
+    #     end 
+    #     count
+    # end 
     
-    def countPairs(numbers, k)
-    # (a,b) pair ---- target = a+k = b
-    # use k = b-a 
+    
+    # def countPairs(numbers, k)
+    # # (a,b) pair ---- target = a+k = b
+    # # use k = b-a 
+    #     count = 0
+    #     sorted_nums = numbers.sort
+    #     sorted_nums.map do |num|
+    #         if numbers.include?(num+k)
+    #             count +=1
+    #         end
+    #     end
+    #     count
+    # end 
 
-    count = 0
-    sorted_nums = numbers.sort
-    sorted_nums.map do |num|
-        if numbers.include?(num+k)
-            count +=1
-        end
-    end
-    count
-    # binding.pry
-    end 
+    # def makepairs(numbers)
+    #     hash_table = {}
+    # end 
 end 
 

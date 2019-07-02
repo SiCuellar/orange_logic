@@ -21,11 +21,11 @@ class OrgTest < Minitest::Test
         assert_equal 3, org.kDifference(a, 2)
     end 
 
-    def test_it_can_make_pairs
-        org = Org.new
-        numbers = [1,1,1,2]
-        assert_equal 1, org.countPairs(numbers,1)
-    end 
+    # def test_it_can_make_pairs
+    #     org = Org.new
+    #     numbers = [1,1,1,2]
+    #     assert_equal [(1,1),(1,2)], org.makepairs(numbers)
+    # end 
 
     # def test_it_can_count_pairs
     #     org = Org.new

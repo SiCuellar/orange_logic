@@ -56,8 +56,28 @@ class Org
       end
     end
 
+    def easyStrings_two(string_a, string_b)
+      a_array = string_a.chars
+      b_array = string_b.chars
+
+      counter = 0
+      consecutive_moves_counter(a_array, b_array, counter)
+    end
+
+    def consecutive_moves_counter(a_array, b_array, counter)
+      if b_array == a_array
+        counter
+      else
+        if 
+      end
+    end
+
+
+
+
 
 end
+
 # def make_pairs(numbers, k)
 #     counter = 0
 #     sorted_nums = (numbers.uniq).sort
